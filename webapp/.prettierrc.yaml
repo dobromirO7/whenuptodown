@@ -1,5 +1,6 @@
+# .prettierrc or .prettierrc.yaml
 printWidth: 120
-trailingComa: es5
+trailingComa: "es5"
 tabWidth: 2
 semi: false
 singleQuote: true
