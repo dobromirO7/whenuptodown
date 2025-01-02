@@ -1,19 +1,20 @@
 import { initTRPC } from '@trpc/server'
 
-const ideas = [
-    { nick: 'cool-idea-nick-1', name: 'Idea 1', description: 'Description of idea 1...' },
-    { nick: 'cool-idea-nick-2', name: 'Idea 2', description: 'Description of idea 2...' },
-    { nick: 'cool-idea-nick-3', name: 'Idea 3', description: 'Description of idea 3...' },
-    { nick: 'cool-idea-nick-4', name: 'Idea 4', description: 'Description of idea 4...' },
-    { nick: 'cool-idea-nick-5', name: 'Idea 5', description: 'Description of idea 5...' },
-  ]
+const primery = [
+  { nick: 'cool-primer-nick-1', name: 'primer 1', description: 'Description of primer 1...' },
+  { nick: 'cool-primer-nick-2', name: 'primer 2', description: 'Description of primer 2...' },
+  { nick: 'cool-primer-nick-3', name: 'primer 3', description: 'Description of primer 3...' },
+  { nick: 'cool-primer-nick-4', name: 'primer 4', description: 'Description of primer 4...' },
+  { nick: 'cool-primer-nick-5', name: 'primer 5', description: 'Description of primer 5...' }
+]
 
 const trpc = initTRPC.create()
 
+
 export const trpcRouter = trpc.router({
-    getIdeas: trpc.procedure.query(() => {
-      return { ideas }
-    }),
-  })
-  
-  export type TrpcRouter = typeof trpcRouter
+  getPrimery: trpc.procedure.query(() => {
+    return { primery }
+  }),
+})
+
+export type trpcRouter = typeof trpcRouter
