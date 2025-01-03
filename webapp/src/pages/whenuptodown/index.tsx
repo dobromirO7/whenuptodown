@@ -14,10 +14,10 @@ export const AllPrimeryPage = () => {
   return (
     <div>
       <h1>All Primery</h1>
-      {data.Primery.map((idea) => (
-        <div key={idea.nick}>
-          <h2>{idea.name}</h2>
-          <p>{idea.description}</p>
+      {data.primery.map((primer) => (
+        <div key={primer.nick}>
+          <h2>{primer.name}</h2>
+          <p>{primer.description}</p>
         </div>
       ))}
     </div>
