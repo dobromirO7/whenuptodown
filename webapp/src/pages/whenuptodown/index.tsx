@@ -23,3 +23,4 @@ export const AllPrimeryPage = () => {
     </div>
   )
 }
+const x: string = 1
