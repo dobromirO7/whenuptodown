@@ -19,3 +19,4 @@ expressApp.use(
 expressApp.listen(3000, () => {
   console.info('Server is running on http://localhost:3000')
 })
+const x: string = 1
