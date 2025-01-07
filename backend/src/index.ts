@@ -13,7 +13,7 @@ expressApp.use(
   '/trpc',
   trpcExpress.createExpressMiddleware({
     router: trpcRouter,
-  })  
+  })
 )
 
 expressApp.listen(3000, () => {
