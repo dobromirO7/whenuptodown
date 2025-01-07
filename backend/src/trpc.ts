@@ -6,7 +6,8 @@ const primery = [
   { nick: 'cool-primer-nick-3', name: 'primer 3', description: 'Description of primer 3...' },
   { nick: 'cool-primer-nick-4', name: 'primer 4', description: 'Description of primer 4...' },
   { nick: 'cool-primer-nick-5', name: 'primer 5', description: 'Description of primer 5...' },
-  { nick: 'cool-primer-nick-6', name: 'primer 6', description: 'Description of primer 6...' }
+  { nick: 'cool-primer-nick-6', name: 'primer 6', description: 'Description of primer 6...' },
+  { nick: 'cool-primer-nick-7', name: 'primer 7', description: 'Description of primer 7...' }
 ]
 
 const trpc = initTRPC.create()
