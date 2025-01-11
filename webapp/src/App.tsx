@@ -8,4 +8,4 @@ export const App = () => {
     </TrpcProvider>
   )
 }
-if x:string=1 console.log(123)
+
