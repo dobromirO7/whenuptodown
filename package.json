@@ -7,7 +7,7 @@
     "w": "pnpm --filter @whenuptodown/webapp",
     "dev": "pnpm -r --parallel dev",
     "types": "concurrently 'pnpm b types' 'pnpm w types'",
-    "lint": "concurrently \"pnpm b lint\" \"pnpm w lint\"",
+    "lint": "concurrently 'pnpm b lint' 'pnpm w lint'",
     "prettify": "pnpm -r --parallel prettify"
   },
   "devDependencies": {
