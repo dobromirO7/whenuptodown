@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --fix --ext .ts,.tsx",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --fix --ext .ts,.tsx .",
     "preview": "vite preview",
     "prettify": "prettier --log-level warn --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,scss}' '!**/{node_modules,dist}/**/*'",
     "types": "tsc --noEmit --project ./tsconfig.app.json && tsc --noEmit --project ./tsconfig.node.json"
@@ -20,7 +20,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-  "devDependencies": {    
+  "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
