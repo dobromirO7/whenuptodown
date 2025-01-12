@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import { getViewPrimerRoute } from '../../lib/routes'
 import { trpc } from '../../lib/trpc'
 
 export const AllPrimeryPage = () => {
@@ -16,7 +18,10 @@ export const AllPrimeryPage = () => {
       <h1>All Primery</h1>
       {data.primery.map((primer) => (
         <div key={primer.nick}>
-          <h2>{primer.name}</h2>
+          <h2>
+            {' '}
+            <Link to={getViewPrimerRoute({ primerNick: primer.nick })}>{primer.name}</Link>
+          </h2>
           <p>{primer.description}</p>
         </div>
       ))}
