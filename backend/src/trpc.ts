@@ -1,22 +1,19 @@
 import { initTRPC } from '@trpc/server'
+import _ from 'lodash'
 
-const primery = [
-  { nick: 'cool-primer-nick-1', name: 'primer 1', description: 'Description of primer 1...' },
-  { nick: 'cool-primer-nick-2', name: 'primer 2', description: 'Description of primer 2...' },
-  { nick: 'cool-primer-nick-3', name: 'primer 3', description: 'Description of primer 3...' },
-  { nick: 'cool-primer-nick-4', name: 'primer 4', description: 'Description of primer 4...' },
-  { nick: 'cool-primer-nick-5', name: 'primer 5', description: 'Description of primer 5...' },
-  { nick: 'cool-primer-nick-6', name: 'primer 6', description: 'Description of primer 6...' },
-  { nick: 'cool-primer-nick-7', name: 'primer 7', description: 'Description of primer 7...' },
-]
+const primery = _.times(100, (i) => ({
+  nick: `cool-primer-nick-${i}`,
+  name: `Primer ${i}`,
+  description: `Description of primer ${i}...`,
+  text: _.times(100, (j) => `<p>Text paragrph ${j} of primer ${i}...</p>`).join(''),
+}))
 
 const trpc = initTRPC.create()
 
 export const trpcRouter = trpc.router({
   getPrimery: trpc.procedure.query(() => {
-    return { primery }
+    return { primery: primery.map((primer) => _.pick(primer, ['nick', 'name', 'description'])) }
   }),
 })
 
 export type TrpcRouter = typeof trpcRouter
-
