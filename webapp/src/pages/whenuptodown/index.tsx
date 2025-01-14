@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Segment } from '../../components/Segment'
 import { getViewPrimerRoute } from '../../lib/routes'
 import { trpc } from '../../lib/trpc'
 import css from './index.module.scss'
@@ -15,20 +16,22 @@ export const AllPrimeryPage = () => {
   }
 
   return (
-    <div>
-      <h1 className={css.title}>All primery</h1>
+    <Segment title="All Primery">
       <div className={css.primery}>
         {data.primery.map((primer) => (
           <div className={css.primer} key={primer.nick}>
-            <h2 className={css.primerName}>
-              <Link className={css.primerLink} to={getViewPrimerRoute({ primerNick: primer.nick })}>
-                {primer.name}
-              </Link>
-            </h2>
-            <p className={css.primerDescription}>{primer.description}</p>
+            <Segment
+              size={2}
+              title={
+                <Link className={css.primerLink} to={getViewPrimerRoute({ primerNick: primer.nick })}>
+                  {primer.name}
+                </Link>
+              }
+              description={primer.description}
+            />
           </div>
         ))}
       </div>
-    </div>
+    </Segment>
   )
 }

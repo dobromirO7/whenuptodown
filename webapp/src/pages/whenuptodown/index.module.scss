@@ -13,17 +13,8 @@
     & + .primer {
       margin-top: 20px;
     }
-
-    .primerName {
-      @include h2;
-
-      .primerLink {
-        @include link;
-      }
-    }
-
-    .primerDescription {
-      font-size: 18px;
+    .primerLink {
+      @include link;
     }
   }
 }

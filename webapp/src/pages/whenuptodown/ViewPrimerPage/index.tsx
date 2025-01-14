@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import { Segment } from '../../../components/Segment'
 import { type ViewPrimerRouteParams } from '../../../lib/routes'
 import { trpc } from '../../../lib/trpc'
 import css from './index.module.scss'
@@ -22,10 +23,8 @@ export const ViewPrimerPage = () => {
   }
 
   return (
-    <div>
-      <h1 className={css.title}>{data.primer.name}</h1>
-      <p className={css.description}>{data.primer.description}</p>
+    <Segment title={data.primer.name} description={data.primer.description}>
       <div className={css.text} dangerouslySetInnerHTML={{ __html: data.primer.text }} />
-    </div>
+    </Segment>
   )
 }
