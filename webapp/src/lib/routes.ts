@@ -6,3 +6,4 @@ export const getAllPrimeryRoute = () => '/'
 export const viewPrimerRouteParams = getRouteParams({ primerNick: true })
 export type ViewPrimerRouteParams = typeof viewPrimerRouteParams
 export const getViewPrimerRoute = ({ primerNick }: ViewPrimerRouteParams) => `/primery/${primerNick}`
+export const getNewPrimerRoute = () => '/primery/new'

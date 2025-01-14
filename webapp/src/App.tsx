@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
-import { getAllPrimeryRoute, getViewPrimerRoute } from './lib/routes'
+import * as routes from './lib/routes'
 import { TrpcProvider } from './lib/trpc'
 import { AllPrimeryPage } from './pages/whenuptodown'
+import { NewPrimerPage } from './pages/whenuptodown/NewPrimerPage'
 import { ViewPrimerPage } from './pages/whenuptodown/ViewPrimerPage'
 import './styles/global.scss'
 
@@ -12,8 +13,9 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path={getAllPrimeryRoute()} element={<AllPrimeryPage />} />
-            <Route path={getViewPrimerRoute({ primerNick: ':primerNick' })} element={<ViewPrimerPage />} />
+            <Route path={routes.getAllPrimeryRoute()} element={<AllPrimeryPage />} />
+            <Route path={routes.getNewPrimerRoute()} element={<NewPrimerPage />} />
+            <Route path={routes.getViewPrimerRoute(routes.viewPrimerRouteParams)} element={<ViewPrimerPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
