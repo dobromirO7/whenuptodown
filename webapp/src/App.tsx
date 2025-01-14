@@ -4,6 +4,7 @@ import { getAllPrimeryRoute, getViewPrimerRoute } from './lib/routes'
 import { TrpcProvider } from './lib/trpc'
 import { AllPrimeryPage } from './pages/whenuptodown'
 import { ViewPrimerPage } from './pages/whenuptodown/ViewPrimerPage'
+import './styles/global.scss'
 
 export const App = () => {
   return (

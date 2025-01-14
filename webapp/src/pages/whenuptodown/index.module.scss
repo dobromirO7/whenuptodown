@@ -1,0 +1,29 @@
+@import '../../styles/_vars.scss';
+@import '../../styles/_mixins.scss';
+
+.title {
+  @include h1;
+}
+
+.primery {
+  .primer {
+    padding: 20px;
+    border: 1px solid $black;
+    border-radius: 10px;
+    & + .primer {
+      margin-top: 20px;
+    }
+
+    .primerName {
+      @include h2;
+
+      .primerLink {
+        @include link;
+      }
+    }
+
+    .primerDescription {
+      font-size: 18px;
+    }
+  }
+}
