@@ -4,12 +4,14 @@ import { z } from 'zod'
 import { Input } from '../../../components/Input'
 import { Segment } from '../../../components/Segment'
 import { Textarea } from '../../../components/Textarea'
+import { trpc } from '../../../lib/trpc'
 
 // eslint-disable-next-line no-lone-blocks
 {
   /* Первой строкой мы импортировали хук формика  */
 }
 export const NewPrimerPage = () => {
+  const createPrimer = trpc.createPrimer.useMutation()
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -28,8 +30,8 @@ export const NewPrimerPage = () => {
         text: z.string().min(100, 'Text should be at least 100 characters long'),
       })
     ),
-    onSubmit: (values) => {
-      console.info('Submitted', values)
+    onSubmit: async (values) => {
+      await createPrimer.mutateAsync(values)
     },
   })
 
