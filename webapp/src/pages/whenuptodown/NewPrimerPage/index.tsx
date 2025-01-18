@@ -6,6 +6,7 @@ import { Alert } from '../../../components/Alert'
 import { Input } from '../../../components/Input'
 import { Segment } from '../../../components/Segment'
 import { Textarea } from '../../../components/Textarea'
+import { Button } from '../../../components/button'
 import { trpc } from '../../../lib/trpc'
 
 export const NewPrimerPage = () => {
@@ -51,11 +52,8 @@ export const NewPrimerPage = () => {
         <Textarea name="text" label="Text" formik={formik} />
         {!formik.isValid && !!formik.submitCount && <div style={{ color: 'red' }}>Some fields are invalid</div>}
         {!!submittingError && <Alert color="red">{submittingError}</Alert>}
-        {successMessageVisible && <Alert color="green">Idea created!</Alert>}
-        <button type="submit">
-          Create Primer
-          {formik.isSubmitting && <span style={{ marginLeft: 5 }}>Loading...</span>}
-        </button>
+        {successMessageVisible && <Alert color="green">Primer created!</Alert>}
+        <Button loading={formik.isSubmitting}>Create Primer</Button>
       </form>
     </Segment>
   )
