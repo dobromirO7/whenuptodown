@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { primery } from '../../lib/primery'
 import { trpc } from '../../lib/trpc'
 
 export const getPrimerTrpcRoute = trpc.procedure
@@ -8,7 +7,14 @@ export const getPrimerTrpcRoute = trpc.procedure
       primerNick: z.string(),
     })
   )
-  .query(({ input }) => {
-    const primer = primery.find((primer) => primer.nick === input.primerNick)
-    return { primer: primer || null }
+
+  .query(async ({ ctx, input }) => {
+    const primer = await ctx.prisma.primer.findUnique({
+      where: {
+        nick: input.primerNick,
+      },
+    })
+
+    return { primer }
   })
+// мы запросили методом асинк контекст из инпут и сравнили ник инпута и ник призмы
