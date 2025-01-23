@@ -4,3 +4,8 @@
 .title {
   @include h1;
 }
+
+.createdAt {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
