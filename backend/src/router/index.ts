@@ -3,6 +3,7 @@ import { trpc } from '../lib/trpc'
 import { createPrimerTrpcRoute } from './createPrimer'
 import { getPrimerTrpcRoute } from './getPrimer'
 import { getPrimeryTrpcRoute } from './getPrimery'
+import { signUpTrpcRoute } from './signUp'
 // @endindex
 
 export const trpcRouter = trpc.router({
@@ -10,6 +11,7 @@ export const trpcRouter = trpc.router({
   createPrimer: createPrimerTrpcRoute,
   getPrimer: getPrimerTrpcRoute,
   getPrimery: getPrimeryTrpcRoute,
+  signUp: signUpTrpcRoute,
   // @endindex
 })
 
