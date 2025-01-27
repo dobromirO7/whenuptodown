@@ -1,5 +1,5 @@
 # dobr
-### Trained as DevOps Engineer | TypeScript Developer
+### Learning DevOps | TypeScript developer
 
 Passionate Systems Administrator with experience in full stack and cloud development..
 
