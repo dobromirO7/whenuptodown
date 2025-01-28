@@ -3,11 +3,11 @@ import { useFormik } from 'formik'
 import { withZodSchema } from 'formik-validator-zod'
 import { useState } from 'react'
 import { Alert } from '../../../components/Alert'
+import { Button } from '../../../components/Button'
 import { FormItems } from '../../../components/FormItems'
 import { Input } from '../../../components/Input'
 import { Segment } from '../../../components/Segment'
 import { Textarea } from '../../../components/Textarea'
-import { Button } from '../../../components/button'
 import { trpc } from '../../../lib/trpc'
 
 export const NewPrimerPage = () => {

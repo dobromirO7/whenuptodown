@@ -4,6 +4,7 @@ import * as routes from './lib/routes'
 import { TrpcProvider } from './lib/trpc'
 import { AllPrimeryPage } from './pages/whenuptodown'
 import { NewPrimerPage } from './pages/whenuptodown/NewPrimerPage'
+import { SignInPage } from './pages/whenuptodown/SignInPage'
 import { SignUpPage } from './pages/whenuptodown/SignUpPage'
 import { ViewPrimerPage } from './pages/whenuptodown/ViewPrimerPage'
 import './styles/global.scss'
@@ -18,6 +19,7 @@ export const App = () => {
             <Route path={routes.getAllPrimeryRoute()} element={<AllPrimeryPage />} />
             <Route path={routes.getNewPrimerRoute()} element={<NewPrimerPage />} />
             <Route path={routes.getViewPrimerRoute(routes.viewPrimerRouteParams)} element={<ViewPrimerPage />} />
+            <Route path={routes.getSignInRoute()} element={<SignInPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
