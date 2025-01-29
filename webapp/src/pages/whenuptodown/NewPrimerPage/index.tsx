@@ -54,8 +54,8 @@ export const NewPrimerPage = () => {
           <Textarea name="text" label="Text" formik={formik} />
           {!formik.isValid && !!formik.submitCount && <div style={{ color: 'red' }}>Some fields are invalid</div>}
           {!!submittingError && <Alert color="red">{submittingError}</Alert>}
-          {successMessageVisible && <Alert color="green">Idea created!</Alert>}
-          <Button loading={formik.isSubmitting}>Create Idea</Button>
+          {successMessageVisible && <Alert color="green">Primer created!</Alert>}
+          <Button loading={formik.isSubmitting}>Create Primer</Button>
         </FormItems>
       </form>
     </Segment>
