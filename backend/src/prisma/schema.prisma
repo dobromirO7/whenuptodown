@@ -13,6 +13,7 @@ model User {
   password    String
   nick        String @unique
   createdAt   DateTime @default(now())
+  primery     Primer[]
 }
 model Primer {
   id          String @id @default(uuid())
@@ -20,5 +21,7 @@ model Primer {
   name        String
   description String
   text        String
-  createdAt   DateTime @default(now())  
+  createdAt   DateTime @default(now())
+  authorId    String
+  author      User @relation(fields: [authorId], references: [id])
 }

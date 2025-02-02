@@ -13,6 +13,14 @@ export const getPrimerTrpcRoute = trpc.procedure
       where: {
         nick: input.primerNick,
       },
+      include: {
+        author: {
+          select: {
+            id: true,
+            nick: true,
+          },
+        },
+      },
     })
 
     return { primer }

@@ -27,6 +27,7 @@ export const ViewPrimerPage = () => {
     <Segment title={data.primer.name} description={data.primer.description}>
       <div className={css.createdAt}>Created At: {format(data.primer.createdAt, 'yyyy-MM-dd')}</div>
       <div className={css.text} dangerouslySetInnerHTML={{ __html: data.primer.text }} />
+      <div className={css.author}>Author: {data.primer.author.nick}</div>
     </Segment>
   )
 }
