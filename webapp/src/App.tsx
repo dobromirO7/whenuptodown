@@ -3,6 +3,7 @@ import { Layout } from './components/Layout'
 import * as routes from './lib/routes'
 import { TrpcProvider } from './lib/trpc'
 import { AllPrimeryPage } from './pages/whenuptodown'
+import { EditPrimerPage } from './pages/whenuptodown/EditPrimerPage'
 import { NewPrimerPage } from './pages/whenuptodown/NewPrimerPage'
 import { SignInPage } from './pages/whenuptodown/SignInPage'
 import { SignOutPage } from './pages/whenuptodown/SignOutPage'
@@ -22,6 +23,7 @@ export const App = () => {
             <Route path={routes.getNewPrimerRoute()} element={<NewPrimerPage />} />
             <Route path={routes.getViewPrimerRoute(routes.viewPrimerRouteParams)} element={<ViewPrimerPage />} />
             <Route path={routes.getSignInRoute()} element={<SignInPage />} />
+            <Route path={routes.getEditPrimerRoute(routes.editPrimerRouteParams)} element={<EditPrimerPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

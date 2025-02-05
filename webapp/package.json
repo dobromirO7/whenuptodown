@@ -31,6 +31,7 @@
     "reset-css": "^5.0.2",
     "sass": "^1.83.1",
     "superjson": "^1.9.1",
+    "lodash": "^4.17.21",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -39,6 +40,7 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "@types/lodash": "^4.17.14",
     "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "sass-embedded": "^1.83.4",
